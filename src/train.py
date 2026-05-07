@@ -8,7 +8,7 @@ import os
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, f1_score
 
-EVAL_THRESHOLD = 0.65
+EVAL_THRESHOLD = 0.7
 
 
 def train(
