@@ -1,0 +1,5 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = gs://day-21-vin-ai-bucket/dvc
+    credentialpath = ../sa-key.json
