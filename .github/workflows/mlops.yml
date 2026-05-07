@@ -60,7 +60,9 @@ jobs:
 
       - name: Authenticate to Cloud Storage
         run: |
-          echo '${{ secrets.CLOUD_CREDENTIALS }}' > /tmp/sa-key.json
+          cat << 'EOF' > /tmp/sa-key.json
+          ${{ secrets.CLOUD_CREDENTIALS }}
+          EOF
           echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa-key.json" >> $GITHUB_ENV
 
       - name: Pull data with DVC
